@@ -27,3 +27,8 @@ Organização das informações para fácil leitura e análise.
 Carregamento: Os dados processados são inseridos em uma tabela PostgreSQL chamada weather_data.
 
 Orquestração: Uma DAG simples do Airflow executa todo o pipeline automaticamente a cada 12 horas.
+
+## 📌 Observações
+O pipeline é um projeto inicial, com foco no aprendizado de orquestração e integração de dados.
+O código pode ser facilmente adaptado para outras APIs ou bancos de dados.
+Toda sugestão de melhoria é muito bem-vinda! 😊

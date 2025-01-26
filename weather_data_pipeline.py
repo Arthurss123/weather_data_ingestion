@@ -6,11 +6,10 @@ import requests
 import pandas as pd
 from sqlalchemy import create_engine
 
-# Função para converter temperatura de Kelvin para Celsius
 def kelvin_to_celsius(temp_k):
     return temp_k - 273.15
 
-# Função principal da DAG
+
 def fetch_and_store_weather_data():
     api_key = "b7622a80bb77fdd937103abc681a82a9"
     lat = -15.78  # Latitude de Brasília
@@ -21,7 +20,7 @@ def fetch_and_store_weather_data():
     if response.status_code == 200:
         data = response.json()
 
-        # Processar os dados
+        
         weather_data = []
         for hour in data['hourly']:
             date_time = datetime.fromtimestamp(hour['dt']).strftime('%Y-%m-%d %H:%M:%S')
@@ -48,7 +47,7 @@ def fetch_and_store_weather_data():
 
         df = pd.DataFrame(weather_data)
 
-        # Conexão com o banco de dados
+       
         db_usernames = 'postgres'
         db_password = 'senha'
         db_host = 'localhost'
@@ -66,7 +65,7 @@ def fetch_and_store_weather_data():
     else:
         print(f"Erro ao buscar dados da API: {response.status_code}")
 
-# Definição da DAG
+
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
