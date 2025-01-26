@@ -14,13 +14,13 @@ Docker: Contêiner para o banco de dados PostgreSQL.
 ## 📋 Funcionamento do Pipeline
 Extração: Faz uma requisição à API do OpenWeather e coleta dados meteorológicos de Brasília, incluindo:
 
-> Temperatura
-> Sensação térmica
-> Umidade
-> Velocidade do vento
-> Condições climáticas
-> Entre outros.
-> Transformação: Os dados brutos são processados, incluindo:
+>- Temperatura
+>- Sensação térmica
+>- Umidade
+>- Velocidade do vento
+>- Condições climáticas
+>- Entre outros.
+>- Transformação: Os dados brutos são processados, incluindo:
 
 Conversão de temperaturas de Kelvin para Celsius.
 Organização das informações para fácil leitura e análise.
